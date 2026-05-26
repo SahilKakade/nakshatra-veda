@@ -29,12 +29,15 @@ export default function LeadForm({
       HTMLInputElement | HTMLSelectElement
     >
   ) => {
-    const {
-      name,
-      value,
-      type,
-      checked,
-    } = e.target;
+    const target =
+  e.target as HTMLInputElement;
+
+      const {
+        name,
+        value,
+        type,
+        checked,
+      } = target;
 
     setFormData((prev) => ({
       ...prev,
