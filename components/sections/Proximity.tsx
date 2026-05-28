@@ -66,12 +66,11 @@ export default function Proximity() {
       id="proximity"
       className="
         bg-[#FAFAF8]
-        py-24
-        md:py-32
+        py-20
+        md:py-28
         scroll-mt-32
       "
     >
-
       <div className="container-custom">
 
         {/* Heading */}
@@ -91,14 +90,14 @@ export default function Proximity() {
           transition={{
             duration: 0.7,
           }}
-          className="text-center max-w-4xl mx-auto mb-20"
+          className="text-center max-w-4xl mx-auto mb-14 md:mb-20"
         >
 
           <p className="text-[#D4AF37] text-[12px] tracking-[0.25em] uppercase mb-5">
             Proximity
           </p>
 
-          <h2 className="heading-font text-[42px] md:text-[64px] leading-[1.08] text-[#1A1A1A]">
+          <h2 className="heading-font text-[34px] md:text-[64px] leading-[1.08] text-[#1A1A1A]">
             The one location where work,
             life, and leisure all meet.
           </h2>
@@ -106,7 +105,7 @@ export default function Proximity() {
         </motion.div>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-5 md:gap-6">
 
           {proximityData.map(
             (item, index) => (
@@ -134,27 +133,34 @@ export default function Proximity() {
                 className="
                   relative
                   bg-white
-                  rounded-[12px]
-                  p-7
-                  shadow-[0_10px_40px_rgba(0,0,0,0.06)]
+                  rounded-[18px]
+                  p-6
+                  md:p-7
+                  shadow-[0_12px_40px_rgba(0,0,0,0.06)]
                   border
                   border-black/5
-                  min-h-[260px]
+                  min-h-[280px]
+                  flex
+                  flex-col
+                  overflow-hidden
+                  transition-all
+                  duration-300
+                  hover:shadow-[0_18px_60px_rgba(0,0,0,0.08)]
                 "
               >
 
                 {/* Number */}
-                <div className="absolute top-5 right-5 text-[#3D3118]/20 heading-font text-5xl">
+                <div className="absolute top-5 right-5 text-[#5C1F4A]/10 heading-font text-[54px] leading-none select-none">
                   {item.number}
                 </div>
 
                 {/* Title */}
-                <h3 className="text-[#1A1A1A] text-[22px] heading-font mb-6 pr-12 leading-[1.2]">
+                <h3 className="text-[#1A1A1A] text-[22px] md:text-[24px] heading-font mb-6 pr-14 leading-[1.2]">
                   {item.title}
                 </h3>
 
                 {/* List */}
-                <ul className="space-y-3">
+                <ul className="space-y-3 flex-1">
 
                   {item.items.map(
                     (listItem) => (
@@ -170,7 +176,7 @@ export default function Proximity() {
                         "
                       >
 
-                        <span className="mt-[11px] w-[5px] h-[5px] rounded-full bg-[#000000] flex-shrink-0" />
+                        <span className="mt-[11px] w-[5px] h-[5px] rounded-full bg-[#D4AF37] flex-shrink-0" />
 
                         <span>
                           {listItem}
@@ -181,6 +187,19 @@ export default function Proximity() {
                   )}
 
                 </ul>
+
+                {/* Footer */}
+                <div className="mt-6 pt-5 border-t border-black/5 flex items-center justify-between">
+
+                  <p className="text-[12px] tracking-[0.15em] uppercase text-[#5C1F4A] font-medium">
+                    Nearby Essentials
+                  </p>
+
+                  <p className="text-[12px] text-[#777777] italic">
+                    & many more...
+                  </p>
+
+                </div>
 
               </motion.div>
             )

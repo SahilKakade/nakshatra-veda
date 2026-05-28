@@ -27,17 +27,17 @@ export default function About() {
             {/* Heading */}
             <h2 className="heading-font text-[48px] md:text-[72px] leading-[0.95] text-[#1A1A1A] max-w-[560px]">
 
-              India&apos;s Modern
+              More Than 
 
               <br />
 
               <span className="font-semibold">
-                Property Intelligence
+                Square Feet.
               </span>
 
               <br />
 
-              Platform
+              Better Living by Design 
 
             </h2>
 
@@ -98,15 +98,17 @@ export default function About() {
             <div className="space-y-8 text-black/55 text-lg leading-10">
 
               <p>
-                At Nakshatra Veda, we redefine real estate investment through a sophisticated blend of market intelligence, curated opportunities, and unwavering commitment to client success.
+               Nakshatra Veda presents The Showstopper Edition — thoughtfully designed 2 & 3 BHK residences in Vasai East crafted for modern family living. Set within Madhuban, Yashwant Smart City, the project blends comfort, connectivity, and everyday convenience in one well-planned address.
               </p>
 
               <p>
-                With over 20 years of deep market expertise across India&apos;s premium real estate landscape, we serve as trusted advisors to discerning investors seeking exceptional properties that deliver both prestige and performance.
+                Spread across a grand township with a ready podium, Nakshatra Veda offers 55+ lifestyle amenities including a swimming pool, gym, clubhouse, landscaped spaces, and more — designed around the way you want to live.
+
               </p>
 
               <p>
-                Our approach combines data-driven insights with personalized guidance, ensuring every investment decision is backed by comprehensive analysis and aligned with your long-term wealth creation goals.
+                Located just minutes from Vasai Railway Station, with seamless access to schools, hospitals, and daily essentials, Nakshatra Veda brings together spacious living, thoughtful planning, and a lifestyle that simply feels complete.
+
               </p>
 
             </div>
@@ -116,7 +118,7 @@ export default function About() {
 
               <div>
 
-                <h3 className="heading-font text-5xl text-[#D4AF37] mb-3">
+                <h3 className="text-[#D4AF37] text-4xl mb-3 font-semibold">
                   4000+
                 </h3>
 
@@ -128,7 +130,7 @@ export default function About() {
 
               <div>
 
-                <h3 className="heading-font text-5xl text-[#D4AF37] mb-3">
+                <h3 className="text-[#D4AF37] text-4xl mb-3 font-semibold">
                   ₹1200Cr+
                 </h3>
 

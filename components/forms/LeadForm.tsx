@@ -15,6 +15,11 @@ export default function LeadForm({
   const [loading, setLoading] =
     useState(false);
 
+
+
+  const [showSuccess, setShowSuccess] =
+  useState(false);
+
   const [formData, setFormData] =
     useState({
       full_name: "",
@@ -70,16 +75,37 @@ export default function LeadForm({
       setLoading(true);
 
       /* SAVE TO SUPABASE */
-      const { error } =
-        await supabase
-          .from("leads")
-          .insert([
-            {
-              ...formData,
-              page_url:
-                window.location.href,
-            },
-          ]);
+     const params =
+  new URLSearchParams(
+    window.location.search
+  );
+
+const { error } =
+  await supabase
+    .from("leads")
+    .insert([
+      {
+        ...formData,
+
+        page_url:
+          window.location.href,
+
+        utm_source:
+          params.get("utm_source"),
+
+        utm_medium:
+          params.get("utm_medium"),
+
+        utm_campaign:
+          params.get("utm_campaign"),
+
+        utm_term:
+          params.get("utm_term"),
+
+        utm_content:
+          params.get("utm_content"),
+      },
+    ]);
 
       if (error) {
         console.log(error);
@@ -96,9 +122,27 @@ export default function LeadForm({
           "Content-Type":
             "application/json",
         },
-        body: JSON.stringify(
-          formData
-        ),
+        body: JSON.stringify({
+  ...formData,
+
+  page_url:
+    window.location.href,
+
+  utm_source:
+    params.get("utm_source"),
+
+  utm_medium:
+    params.get("utm_medium"),
+
+  utm_campaign:
+    params.get("utm_campaign"),
+
+  utm_term:
+    params.get("utm_term"),
+
+  utm_content:
+    params.get("utm_content"),
+}),
       });
 
       /* UNLOCK FLOOR PLANS */
@@ -108,9 +152,7 @@ export default function LeadForm({
         )
       );
 
-      alert(
-        "Inquiry submitted successfully"
-      );
+      setShowSuccess(true);
 
       /* RESET FORM */
       setFormData({
@@ -289,6 +331,117 @@ export default function LeadForm({
               ? "Submitting..."
               : "SUBMIT"}
           </button>
+          {/* SUCCESS POPUP */}
+{showSuccess && (
+
+  <div
+    className="
+      fixed
+      inset-0
+      z-[9999]
+      bg-black/60
+      backdrop-blur-sm
+      flex
+      items-center
+      justify-center
+      px-5
+    "
+  >
+
+    <div
+      className="
+        bg-[#1A1A1A]
+        border
+        border-[#D4AF37]/20
+        rounded-[24px]
+        p-8
+        md:p-10
+        max-w-[480px]
+        w-full
+        text-center
+        shadow-[0_20px_80px_rgba(0,0,0,0.45)]
+      "
+    >
+
+      {/* ICON */}
+      <div
+        className="
+          w-20
+          h-20
+          rounded-full
+          bg-[#D4AF37]/10
+          flex
+          items-center
+          justify-center
+          mx-auto
+          mb-6
+        "
+      >
+
+        <span className="text-[#D4AF37] text-4xl">
+          ✓
+        </span>
+
+      </div>
+
+      {/* TITLE */}
+      <h3
+        className="
+          heading-font
+          text-[36px]
+          leading-none
+          text-[#D4AF37]
+          mb-5
+        "
+      >
+
+        Thank You
+
+      </h3>
+
+      {/* TEXT */}
+      <p
+        className="
+          text-white/75
+          text-[16px]
+          leading-8
+          mb-8
+        "
+      >
+
+        Your enquiry has been submitted successfully.
+
+        Our team will reach out to you shortly with complete project details.
+
+      </p>
+
+      {/* BUTTON */}
+      <button
+        onClick={() => {
+          setShowSuccess(false);
+        }}
+        className="
+          w-full
+          h-[58px]
+          rounded-[16px]
+          bg-[#D4AF37]
+          hover:bg-[#c9a12f]
+          transition-all
+          duration-300
+          text-black
+          font-semibold
+          tracking-[0.08em]
+        "
+      >
+
+        CLOSE
+
+      </button>
+
+    </div>
+
+  </div>
+)}
         </form>
       </div>
     </div>

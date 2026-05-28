@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const socialLinks = [
   {
-    href: "#",
+    href: "https://www.facebook.com/jsbhomemakers",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -18,7 +18,7 @@ const socialLinks = [
     ),
   },
   {
-    href: "#",
+    href: "https://www.instagram.com/jsbhomemakers/",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +32,7 @@ const socialLinks = [
     ),
   },
   {
-    href: "#",
+    href: "https://www.linkedin.com/company/jsb-group/",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +46,7 @@ const socialLinks = [
     ),
   },
   {
-    href: "#",
+    href: "https://www.youtube.com/@JSBHomemakers/shorts",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +73,7 @@ export default function Footer() {
           {/* LEFT */}
           <div>
             <Image
-              src="/logo.png"
+              src="/logo2.png"
               alt="Nakshatra Veda"
               width={180}
               height={180}
@@ -86,7 +86,7 @@ export default function Footer() {
               experiences, and the journey it holds.
               <br />
               <br />
-              For over 30 years, JSB Group has brought this belief to life,
+              For over 20 years, JSB Group has brought this belief to life,
               delivering thoughtfully envisioned communities crafted with
               purpose, precision, and timeless design.
             </p>

@@ -6,26 +6,18 @@ import { motion } from "framer-motion";
 const amenities = [
   {
     title: "Swimming Pool",
-    description:
-      "Strategic guidance tailored to your wealth creation goals",
     image: "/amenities/pool.jpg",
   },
   {
     title: "High-Tech Gym",
-    description:
-      "Strategic guidance tailored to your wealth creation goals",
     image: "/amenities/gym.jpg",
   },
   {
     title: "Landscape Garden",
-    description:
-      "Strategic guidance tailored to your wealth creation goals",
     image: "/amenities/garden.jpg",
   },
   {
     title: "Club House",
-    description:
-      "Strategic guidance tailored to your wealth creation goals",
     image: "/amenities/clubhouse.jpg",
   },
 ];

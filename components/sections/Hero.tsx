@@ -23,47 +23,44 @@ export default function Hero() {
       {/* Hero Content */}
       <div className="relative z-10 container-custom min-h-screen flex items-center pt-28 pb-10">
 
-        <div className="grid lg:grid-cols-[0.95fr_0.75fr] gap-16 items-center w-full">
+        <div className="grid lg:grid-cols-[0.95fr_0.75fr] gap-16 items-center w-full lg:mt-8">
 
           {/* LEFT CONTENT */}
           <div>
 
             {/* Tag */}
-            <div className="inline-flex items-center rounded-full border border-white/20 px-5 py-2 text-[11px] tracking-[0.18em] text-white/80 mb-8">
-              PREMIUM INVESTMENT INTELLIGENCE
-            </div>
-
+           
             {/* Heading */}
             <h1 className="heading-font text-[50px] md:text-[60px] leading-[0.95] font-light text-white mb-8 max-w-[700px]">
-                Invest Beyond
+                Spaces That
                 <br />
-                Property.
+                Reflect
                 <br />
                 <span className="font-semibold">
-                  Build Legacy.
+                  Who You’ve Become. 
                 </span>
               </h1>
 
             {/* Description */}
             <p className="text-white/80 text-lg leading-9 max-w-[560px] mb-12">
-              Exclusive real estate opportunities curated for modern investors seeking security, growth, and prestige.
+              Thoughtfully crafted 2 & 3 BHK residences in Vasai East.
             </p>
 
             {/* Stats */}
             <div className="flex items-center gap-16">
 
               <div>
-                <h3 className="text-[#D4AF37] text-4xl heading-font mb-2">
-                  500+
-                </h3>
+                   <h3 className="text-[#D4AF37] text-4xl mb-2 font-semibold">
+                      500+
+                    </h3>
 
-                <p className="text-white/60 text-sm">
-                  Premium Properties
-                </p>
-              </div>
+                    <p className="text-white/60 text-sm">
+                      Premium Properties
+                    </p>
+                  </div>
 
               <div>
-                <h3 className="text-[#D4AF37] text-4xl heading-font mb-2">
+                <h3 className="text-[#D4AF37] text-4xl mb-2 font-semibold">
                   1000+
                 </h3>
 
