@@ -140,10 +140,6 @@ export default function Amenities() {
                   {item.title}
                 </h3>
 
-                <p className="text-sm text-white/70 max-w-[260px] leading-6">
-                  {item.description}
-                </p>
-
               </div>
 
             </motion.div>
