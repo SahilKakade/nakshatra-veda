@@ -248,14 +248,16 @@ export default function Gallery() {
 
         {/* Horizontal Scroll */}
         <div
-          className="
-            flex
-            gap-4
-            no-scrollbar
-            pl-5
-            pr-5
-          "
-        >
+  className="
+    flex
+    gap-4
+    overflow-x-auto
+    overflow-y-hidden
+    no-scrollbar
+    pl-5
+    pr-5
+  "
+>
 
           {galleryItems.map((item) => (
             <motion.div
