@@ -5,10 +5,12 @@ import { supabase } from "../../lib/supabase";
 
 interface LeadFormProps {
   variant?: "hero" | "popup";
+  onSuccess?: () => void;
 }
 
 export default function LeadForm({
   variant = "hero",
+  onSuccess,
 }: LeadFormProps) {
   const isPopup = variant === "popup";
 
@@ -153,6 +155,11 @@ const { error } =
       );
 
       setShowSuccess(true);
+      window.history.pushState(
+          {},
+          "",
+          "/thankyou"
+        );
 
       /* RESET FORM */
       setFormData({
@@ -417,9 +424,17 @@ const { error } =
 
       {/* BUTTON */}
       <button
-        onClick={() => {
-          setShowSuccess(false);
-        }}
+          onClick={() => {
+            setShowSuccess(false);
+
+                window.history.pushState(
+                  {},
+                  "",
+                  "/"
+                );
+
+                onSuccess?.();
+          }}
         className="
           w-full
           h-[58px]

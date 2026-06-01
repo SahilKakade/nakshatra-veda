@@ -251,7 +251,6 @@ export default function Gallery() {
           className="
             flex
             gap-4
-            overflow-x-auto
             no-scrollbar
             pl-5
             pr-5

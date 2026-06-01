@@ -18,9 +18,8 @@ import {
 } from "react";
 
 const plans = [
-  "/floorplans/plan1.jpg",
-  "/floorplans/plan2.jpg",
-  "/floorplans/plan3.jpg",
+  "/floorplans/plan-1.jpg",
+  "/floorplans/plan-2.jpg",
 ];
 
 export default function FloorPlans() {
@@ -116,7 +115,7 @@ export default function FloorPlans() {
             className="
               relative
               grid
-              md:grid-cols-3
+              md:grid-cols-2
               gap-5
             "
           >
@@ -184,8 +183,7 @@ export default function FloorPlans() {
 
                 </button>
 
-                {/* CENTER BUTTON OVER MIDDLE IMAGE */}
-                {!isUnlocked && index === 1 && (
+                {!isUnlocked && (
                   <div
                     className="
                       absolute
@@ -193,19 +191,14 @@ export default function FloorPlans() {
                       flex
                       items-center
                       justify-center
-                      bg-black/20
+                      z-20
                     "
                   >
-
                     <button
                       onClick={() => {
-
                         window.dispatchEvent(
-                          new CustomEvent(
-                            "open-lead-form"
-                          )
+                          new CustomEvent("open-lead-form")
                         );
-
                       }}
                       className="
                         bg-[#D4AF37]
@@ -222,11 +215,8 @@ export default function FloorPlans() {
                         shadow-[0_10px_30px_rgba(212,175,55,0.25)]
                       "
                     >
-
                       ENQUIRE NOW
-
                     </button>
-
                   </div>
                 )}
 
@@ -235,25 +225,7 @@ export default function FloorPlans() {
 
           </div>
 
-          {/* DOTS */}
-          <div className="flex justify-center gap-3 mt-10">
-
-            {plans.map((_, index) => (
-              <div
-                key={index}
-                className={`
-                  rounded-full
-                  transition-all
-                  ${
-                    index === 0
-                      ? "w-8 h-2 bg-[#5E4A17]"
-                      : "w-2 h-2 bg-[#D8C9A0]"
-                  }
-                `}
-              />
-            ))}
-
-          </div>
+          
 
         </div>
 

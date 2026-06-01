@@ -150,7 +150,7 @@ export default function Proximity() {
               >
 
                 {/* Number */}
-                <div className="absolute top-5 right-5 text-[#5C1F4A]/10 heading-font text-[54px] leading-none select-none">
+                <div className="absolute top-5 right-5 text-[#D4AF37] heading-font text-[54px] leading-none select-none">
                   {item.number}
                 </div>
 

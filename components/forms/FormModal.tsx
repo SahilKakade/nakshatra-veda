@@ -41,7 +41,10 @@ export default function FormModal({
           Inquiry Form
         </DialogTitle>
 
-        <LeadForm variant="popup" />
+        <LeadForm
+  variant="popup"
+  onSuccess={() => setOpen(false)}
+/>
 
       </DialogContent>
     </Dialog>

@@ -101,7 +101,7 @@ export default function Header() {
             <div className="relative w-22.5 h-22.5 md:w-35 md:h-35 shrink-0">
 
               <Image
-                src="/logo.png"
+                src="/logo-12.png"
                 alt="Nakshatra Veda"
                 fill
                 priority
