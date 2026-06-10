@@ -40,7 +40,7 @@ export default function ThankYouPage() {
         {/* Logo */}
         <div className="mb-10">
           <Image
-            src="/logo.png"
+            src="/logo-12.png"
             alt="Nakshatra Veda"
             width={120}
             height={120}
@@ -111,27 +111,7 @@ export default function ThankYouPage() {
             BACK TO HOME
           </a>
 
-          <a
-            href="tel:+917090696000"
-            className="
-              inline-flex
-              items-center
-              justify-center
-              h-[60px]
-              px-10
-              rounded-[16px]
-              border
-              border-[#D4AF37]
-              text-[#D4AF37]
-              font-semibold
-              tracking-[0.08em]
-              hover:bg-[#D4AF37]/10
-              transition-all
-            "
-          >
-            CALL NOW
-          </a>
-
+          
         </div>
 
         <p className="mt-8 text-sm text-white/40">
