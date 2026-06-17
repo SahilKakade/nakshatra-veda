@@ -1,5 +1,3 @@
-import nodemailer from "nodemailer";
-
 export async function POST(
   req: Request
 ) {
@@ -11,64 +9,81 @@ export async function POST(
       body
     );
 
-    const transporter =
-      nodemailer.createTransport({
-        service: "gmail",
-        auth: {
-          user: process.env
-            .GMAIL_USER,
-          pass: process.env
-            .GMAIL_PASS,
-        },
-      });
+    /* SEND TO MAKE.COM */
+    try {
+      const makeResponse =
+        await fetch(
+          "https://hook.eu1.make.com/iwft5oqygmvyojxlpd8ihxga3n1602ec",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type":
+                "application/json",
+            },
+            body: JSON.stringify({
+              full_name:
+                body.full_name,
 
-    const info =
-      await transporter.sendMail({
-        from: process.env.GMAIL_USER,
+              phone:
+                body.phone,
 
-        to: process.env.GMAIL_USER,
+              email:
+                body.email,
 
-        subject:
-          "New Property Lead",
+              property_interest:
+                body.property_interest,
 
-        html: `
-          <div style="font-family: Arial; padding:20px;">
-            <h2>New Lead Received</h2>
+              page_url:
+                body.page_url,
 
-            <p>
-              <strong>Name:</strong>
-              ${body.full_name}
-            </p>
+              utm_source:
+                body.utm_source,
 
-            <p>
-              <strong>Phone:</strong>
-              ${body.phone}
-            </p>
+              utm_medium:
+                body.utm_medium,
 
-            <p>
-              <strong>Email:</strong>
-              ${body.email}
-            </p>
+              utm_campaign:
+                body.utm_campaign,
 
-            <p>
-              <strong>Property Interest:</strong>
-              ${body.property_interest}
-            </p>
-          </div>
-        `,
-      });
+              utm_term:
+                body.utm_term,
 
-    console.log(
-      "Mail sent:",
-      info.response
-    );
+              utm_content:
+                body.utm_content,
+
+              submitted_at:
+                new Date().toISOString(),
+            }),
+          }
+        );
+
+      console.log(
+        "Make Response:",
+        makeResponse.status
+      );
+
+      const responseText =
+        await makeResponse.text();
+
+      console.log(
+        "Make Response Body:",
+        responseText
+      );
+    } catch (
+      makeError
+    ) {
+      console.log(
+        "Make Error:",
+        makeError
+      );
+    }
 
     return Response.json({
       success: true,
     });
   } catch (error) {
     console.log(
-      "MAIL ERROR:",
+      "API ERROR:",
       error
     );
 
