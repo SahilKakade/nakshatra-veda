@@ -13,7 +13,7 @@ export async function POST(
     try {
       const makeResponse =
         await fetch(
-          "https://hook.eu1.make.com/iwft5oqygmvyojxlpd8ihxga3n1602ec",
+          "https://hooks.zapier.com/hooks/catch/27397666/43atgpo/",
           {
             method: "POST",
             headers: {
