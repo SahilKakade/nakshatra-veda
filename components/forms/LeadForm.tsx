@@ -224,14 +224,14 @@ const { error } =
               </label>
 
               <input
-                required
-                type="text"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                placeholder="+91 98765 43210"
-                className="w-full h-14 bg-white border border-[#DCDCD7] rounded-2xl px-5 text-sm text-black outline-none placeholder:text-black/35 focus:border-[#D4AF37] transition-all"
-              />
+                  required
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  placeholder="+91 98765 43210"
+                  className="w-full h-14 bg-white border border-[#DCDCD7] rounded-2xl px-5 text-sm text-black outline-none placeholder:text-black/35 focus:border-[#D4AF37] transition-all"
+                />
             </div>
           </div>
 
