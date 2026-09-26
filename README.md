@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nakshatra Veda
+
+A full-stack real estate web application built for property discovery and lead management.
+
+## Overview
+
+Nakshatra Veda is a production-ready real estate platform designed to provide users with a structured property discovery experience while supporting business-focused lead generation.
+
+The application was developed with a focus on responsive user interfaces, reusable components, dynamic content and backend/database integration.
+
+## Features
+
+- Property discovery and browsing
+- Property detail pages
+- Lead capture
+- Lead management
+- Responsive user interface
+- Dynamic content
+- Reusable UI components
+- Database integration
+- Production deployment
+
+## Tech Stack
+
+- Next.js
+- React
+- TypeScript
+- Supabase
+- CSS
+- Vercel
+
+## Architecture
+
+The application uses Next.js and React for the frontend and application layer, with Supabase providing backend and database functionality.
+
+The codebase is structured using reusable components and modular application logic to keep the application maintainable and scalable.
 
 ## Getting Started
 
-First, run the development server:
+### Clone the repository
 
 ```bash
+git clone https://github.com/SahilKakade/nakshatra-veda.git
+cd nakshatra-veda
+
+### Install dependencies
+
+```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The application is deployed using Vercel.
 
-## Learn More
+Author
+Sahil Kakade
 
-To learn more about Next.js, take a look at the following resources:
+Full-Stack Developer
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Portfolio: sahilkakade.in
+LinkedIn: linkedin.com/in/sahil-kakade-2123ba171
